@@ -17,7 +17,7 @@ lab$ bazel test -c opt //python/tests:python_module_test
 lab$ bazel run -c opt //:python_random_agent
 ```
 
-*The Python module test originally said "one test failed locally"* but then I think it was because I was not in my virtualenv or something like that. When I run it now, it succeeds.
+*The Python module test originally said "one test failed locally"* but I think it was because I was not in my virtualenv or something like that. When I run it now, it succeeds.
 
 Running their random agent with the visual seems to work:
 
@@ -41,7 +41,7 @@ Starting random spring agent. Action spec: [{'min': -512, 'max': 512, 'name': 'L
 Finished after 10000 steps. Total reward received is 0.000000
 ```
 
-But the really weird thing is that I get these images which show the agent upside down: 
+But the really weird thing is that I get these images *which show the text upside down*: 
 
 ![](IMG_5591_upside_down.JPG)
 
