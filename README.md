@@ -100,13 +100,6 @@ GLimp_Init() - could not load OpenGL subsystem. See "/tmp/dmlab_temp_folder_UUPU
 Using -X forwarding gives me this at the end:
 
 ```
-configure: WARNING:
-  You will not be able to create source packages with 'make dist'
-  because gtk-doc >= 1.20 is not found.
-'config.h' -> 'bazel-out/k8-fastbuild/bin/external/glib_archive/config.h'
-'glib/glibconfig.h' -> 'bazel-out/k8-fastbuild/bin/external/glib_archive/glibconfig.h'
-Target //:python_random_agent up-to-date:
-  bazel-bin/python_random_agent
 INFO: Elapsed time: 30.608s, Critical Path: 21.78s
 INFO: 695 processes: 695 linux-sandbox.
 INFO: Build completed successfully, 703 total actions
