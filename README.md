@@ -75,3 +75,48 @@ But:
 
 - A screen of the maze does not appear!
 - It seems to take longer for some reason, even though the numebr of steps is 10k for both. With `sdl` I am getting about 8 seconds for 10k steps, but `sdl2` requires about 22 seconds. ?!?
+
+
+## ssh Connections
+
+If I do `ssh daniel@...` to my machine, I cannot get the sdl command to run:
+
+```
+bazel run :python_random_agent --define graphics=sdl --     --length=10000 --width=640 --height=480
+```
+
+Regardless of normal ssh or ssh with X forwarding, i.e., `ssh -X daniel@...`. The normal ssh gives me this at the end:
+
+```
+INFO: Elapsed time: 30.978s, Critical Path: 15.69s
+INFO: 695 processes: 695 linux-sandbox.
+INFO: Build completed successfully, 705 total actions
+INFO: Build completed successfully, 705 total actions
+GLimp_Init() - could not load OpenGL subsystem
+GLimp_Init() - could not load OpenGL subsystem. See "/tmp/dmlab_temp_folder_UUPUWE/baselab/crashlog.txt" for details.(deepmindlab) daniel@takeshi:~/lab (master) $
+(deepmindlab) daniel@takeshi:~/lab (master) $
+```
+
+Using -X forwarding gives me this at the end:
+
+```
+configure: WARNING:
+  You will not be able to create source packages with 'make dist'
+  because gtk-doc >= 1.20 is not found.
+'config.h' -> 'bazel-out/k8-fastbuild/bin/external/glib_archive/config.h'
+'glib/glibconfig.h' -> 'bazel-out/k8-fastbuild/bin/external/glib_archive/glibconfig.h'
+Target //:python_random_agent up-to-date:
+  bazel-bin/python_random_agent
+INFO: Elapsed time: 30.608s, Critical Path: 21.78s
+INFO: 695 processes: 695 linux-sandbox.
+INFO: Build completed successfully, 703 total actions
+INFO: Build completed successfully, 703 total actions
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+X Error of failed request:  GLXBadContext
+  Major opcode of failed request:  149 (GLX)
+  Minor opcode of failed request:  6 (X_GLXIsDirect)
+  Serial number of failed request:  96
+  Current serial number in output stream:  95
+daniel@takeshi:~/lab (master) $
+```
