@@ -39,8 +39,12 @@ Finished after 10000 steps. Total reward received is 0.000000
 
 But the really weird thing is that I get these images which show the agent upside down: 
 
+![](IMG_5591_upside_down.JPG)
 
-(Rest of this README is from DeepMind)
+I hit the ESCAPE key to pause the game so it shows the screen. Otherwise the agent just moves randomly and it's distracting. It will automatically terminate after the maximum steps even if I pause it.
+
+
+**(The rest of this README is from DeepMind)**
 
 # <img src="/docs/template/logo.png" alt="DeepMind Lab">
 
