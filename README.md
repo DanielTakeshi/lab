@@ -45,6 +45,8 @@ But the really weird thing is that I get these images *which show the text upsid
 
 ![](IMG_5591_upside_down.JPG)
 
+This seems to explain why: https://github.com/deepmind/lab/issues/104 
+
 I hit the ESCAPE key to pause the game so it shows the screen. Otherwise the agent just moves randomly and it's distracting. It will automatically terminate after the maximum steps even if I pause it.
 
 Doing the `sdl2` graphics option also works:
