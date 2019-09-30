@@ -19,6 +19,8 @@ lab$ bazel run -c opt //:python_random_agent
 
 *The Python module test originally said "one test failed locally"* but I think it was because I was not in my virtualenv or something like that. When I run it now, it succeeds.
 
+# Random Agent
+
 Running their random agent with the visual seems to work:
 
 ```
@@ -113,3 +115,35 @@ X Error of failed request:  GLXBadContext
   Current serial number in output stream:  95
 daniel@takeshi:~/lab (master) $
 ```
+
+BUT ... changing to sdl2 will work for both normal and -X forwarding:
+
+```
+INFO: Elapsed time: 31.486s, Critical Path: 16.09s
+INFO: 832 processes: 832 linux-sandbox.
+INFO: Build completed successfully, 842 total actions
+INFO: Build completed successfully, 842 total actions
+Starting random spring agent. Action spec: [{'min': -512, 'max': 512, 'name': 'LOOK_LEFT_RIGHT_PIXELS_PER_FRAME'}, {'min': -512, 'max': 512, 'name': 'LOOK_DOWN_UP_PIXELS_PER_FRAME'}, {'min': -1, 'max': 1, 'name': 'STRAFE_LEFT_RIGHT'}, {'min': -1, 'max': 1, 'name': 'MOVE_BACK_FORWARD'}, {'min': 0, 'max': 1, 'name': 'FIRE'}, {'min': 0, 'max': 1, 'name': 'JUMP'}, {'min': 0, 'max': 1, 'name': 'CROUCH'}]
+Finished after 10000 steps. Total reward received is 0.000000
+```
+
+and
+
+```
+INFO: Elapsed time: 30.319s, Critical Path: 14.03s
+INFO: 832 processes: 832 linux-sandbox.
+INFO: Build completed successfully, 840 total actions
+INFO: Build completed successfully, 840 total actions
+Starting random spring agent. Action spec: [{'min': -512, 'max': 512, 'name': 'LOOK_LEFT_RIGHT_PIXELS_PER_FRAME'}, {'min': -512, 'max': 512, 'name': 'LOOK_DOWN_UP_PIXELS_PER_FRAME'}, {'min': -1, 'max': 1, 'name': 'STRAFE_LEFT_RIGHT'}, {'min': -1, 'max': 1, 'name': 'MOVE_BACK_FORWARD'}, {'min': 0, 'max': 1, 'name': 'FIRE'}, {'min': 0, 'max': 1, 'name': 'JUMP'}, {'min': 0, 'max': 1, 'name': 'CROUCH'}]
+Finished after 10000 steps. Total reward received is 0.000000
+```
+
+*Though as with the local machine case earlier, no viewer is displayed.*
+
+# Human Agent
+
+TODO
+
+# Other Stuff
+
+TODO
