@@ -1,8 +1,10 @@
 # Setup
 
-I installed bazel locally. I used a Python 3.6 virtualenv and did `pip install numpy` there. I then changed `python.BUILD` to use Python 3.6 instead of Python 3.5 wherever it said `3.5`.
+- I installed bazel locally. 
+- I created a Python 3.6 virtualenv and did `pip install numpy` there.
+- I cloned deepmind/lab and then changed `python.BUILD` to use Python 3.6 instead of Python 3.5 wherever it said `3.5`.
 
-All of these commands work in that they don't give errors on my Ubuntu 18 machine:
+All of these commands below work in that they don't give errors on my Ubuntu 18 machine:
 
 ```
 # Build the Python interface to DeepMind Lab
@@ -14,6 +16,8 @@ lab$ bazel test -c opt //python/tests:python_module_test
 # Run a random agent
 lab$ bazel run -c opt //:python_random_agent
 ```
+
+*The Python module test originally said "one test failed locally"* but then I think it was because I was not in my virtualenv or something like that. When I run it now, it succeeds.
 
 Running their random agent with the visual seems to work:
 
