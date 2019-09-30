@@ -2,7 +2,7 @@
 
 - I installed bazel locally. 
 - I created a Python 3.6 virtualenv and did `pip install numpy` there.
-- I cloned deepmind/lab and then changed `python.BUILD` to use Python 3.6 instead of Python 3.5 wherever it said `3.5`.
+- I cloned deepmind/lab and then changed `python.BUILD` to use 3.6 instead of 3.5 (just replace the text).
 
 All of these commands below work in that they don't give errors on my Ubuntu 18 machine:
 
