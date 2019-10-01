@@ -152,6 +152,56 @@ bazel run :game -- --level_script=tests/empty_room_test --level_setting=logToStd
 
 I can move, jump and do stuff with my agent. *But, I cannot add other agents* and the logger gives me error messages when I try to do that.
 
+## ssh Connection
+
+Unfoertunately the command for empty room does not seem to work. Without X forwarding:
+
+```
+INFO: Build completed successfully, 703 total actions
+logToStdErr: "true"
+----- Client Initialization -----
+Couldn't read q3history.
+----- Initializing Renderer ----
+-------------------------------
+QKEY building random string
+QKEY generated
+----- Client Initialization Complete -----
+----- R_Init -----
+SDL_Init( SDL_INIT_VIDEO ) FAILED (No available video device)
+SDL_Init( SDL_INIT_VIDEO ) FAILED (No available video device)
+Setting r_mode -1 failed, falling back on r_mode 3
+SDL_Init( SDL_INIT_VIDEO ) FAILED (No available video device)
+----- Client Shutdown (Client fatal crashed: GLimp_Init() - could not load OpenGL subsystem) -----
+RE_Shutdown( 1 )
+Hunk_Clear: reset the hunk ok
+-----------------------
+GLimp_Init() - could not load OpenGL subsystem
+GLimp_Init() - could not load OpenGL subsystem. See "/tmp/dmlab_temp_folder_cmDToK/baselab/crashlog.txt" for details.
+```
+
+and with X forwarding:
+
+```
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+logToStdErr: "true"
+----- Client Initialization -----
+Couldn't read q3history.
+----- Initializing Renderer ----
+-------------------------------
+QKEY building random string
+QKEY generated
+----- Client Initialization Complete -----
+----- R_Init -----
+libGL error: No matching fbConfigs or visuals found
+libGL error: failed to load driver: swrast
+X Error of failed request:  GLXBadContext
+  Major opcode of failed request:  149 (GLX)
+  Minor opcode of failed request:  6 (X_GLXIsDirect)
+  Serial number of failed request:  95
+  Current serial number in output stream:  94
+```
+
 
 # Other Stuff
 
