@@ -150,6 +150,9 @@ bazel run :game -- --level_script=tests/empty_room_test --level_setting=logToStd
 
 ![](IMG_8312_human_controls.JPG)
 
+I can move, jump and do stuff with my agent. *But, I cannot add other agents* and the logger gives me error messages when I try to do that.
+
+
 # Other Stuff
 
 TODO
