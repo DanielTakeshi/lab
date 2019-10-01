@@ -142,7 +142,13 @@ Finished after 10000 steps. Total reward received is 0.000000
 
 # Human Agent
 
-TODO
+This command works when I'm physically at my computer and not through ssh.
+
+```
+bazel run :game -- --level_script=tests/empty_room_test --level_setting=logToStdErr=true
+```
+
+![](IMG_8312_human_controls.JPG)
 
 # Other Stuff
 
