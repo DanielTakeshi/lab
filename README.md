@@ -154,7 +154,7 @@ I can move, jump and do stuff with my agent. *But, I cannot add other agents* an
 
 ## ssh Connection
 
-Unfoertunately the command for empty room does not seem to work. Without X forwarding:
+Unfortunately the command for empty room does not seem to work. Without X forwarding:
 
 ```
 INFO: Build completed successfully, 703 total actions
@@ -179,7 +179,9 @@ GLimp_Init() - could not load OpenGL subsystem
 GLimp_Init() - could not load OpenGL subsystem. See "/tmp/dmlab_temp_folder_cmDToK/baselab/crashlog.txt" for details.
 ```
 
-and with X forwarding:
+Notice that the `could not load OpenGL subsystem` error is the same I was getting when trying to ssh above for the random agent, for normal ssh connections with sdl graphics.
+
+With X forwarding:
 
 ```
 INFO: Build completed successfully, 1 total action
